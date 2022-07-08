@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="400.0" styleClass="AnchoPane" stylesheets="@../resource/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FrmRegistroController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="430.0" prefWidth="372.0" styleClass="Pane" stylesheets="@../resource/style.css">
+         <children>
+            <ImageView fitHeight="176.0" fitWidth="128.0" layoutX="122.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/img/usuarioRegistro.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="81.0" layoutY="182.0" text="Nombre de Usuario:" />
+            <TextField fx:id="txfUsuario" layoutX="81.0" layoutY="199.0" onAction="#txfUsuario_OnAction" prefHeight="35.0" prefWidth="210.0" styleClass="TextFieldRegistro" stylesheets="@../resource/style.css" />
+            <Label layoutX="81.0" layoutY="257.0" text="Contraseña:" />
+            <PasswordField fx:id="txfContrasenia" layoutX="81.0" layoutY="274.0" onAction="#txfContrasenia_OnAction" prefHeight="35.0" prefWidth="210.0" styleClass="TextFieldRegistro" stylesheets="@../resource/style.css" />
+            <Label layoutX="81.0" layoutY="332.0" text="Repetir contraseña:" />
+            <PasswordField fx:id="txfRepetirC" layoutX="81.0" layoutY="349.0" onAction="#txfRepetirC_OnAction" prefHeight="35.0" prefWidth="210.0" styleClass="TextFieldRegistro" stylesheets="@../resource/style.css" />
+            <Label fx:id="lblRegistroError" alignment="CENTER" layoutX="6.0" layoutY="399.0" prefHeight="17.0" prefWidth="360.0" />
+         </children>
+      </Pane>
+      <Button fx:id="btnRegistrar" defaultButton="true" layoutX="143.0" layoutY="458.0" mnemonicParsing="false" onAction="#btnRegistrar_OnAction" prefHeight="28.0" prefWidth="115.0" styleClass="buttonDefault" stylesheets="@../resource/style.css" text="Registrarse" />
+      <Button fx:id="btnCancelar" cancelButton="true" layoutX="271.0" layoutY="458.0" mnemonicParsing="false" onAction="#btnCancelar_OnAction" prefHeight="28.0" prefWidth="115.0" styleClass="buttonBlanco" stylesheets="@../resource/style.css" text="Cancelar" />
+   </children>
+</AnchorPane>

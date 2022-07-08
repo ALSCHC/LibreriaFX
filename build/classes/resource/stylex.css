@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26/09/2019, 04:00:22
+    Author     : Sosa Luciano
+*/
+
+.AnchoPane {-fx-background-color: #505050}
+
+.AnchorPaneUndecorated {
+    -fx-background-color: #505050;
+    -fx-border-color: #303030}
+
+.Pane {-fx-background-color: #555555}
+
+.TextFieldInicio {
+    -fx-background-color: #626262;
+    -fx-text-fill: #EEEEEE}
+.TextFieldInicio:focused {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-50%)}
+
+.TextFieldRegistro {
+    -fx-background-color: #707070;
+    -fx-text-fill: #EEEEEE}
+
+.buttonDefault {-fx-background-color: #EEEEEE}
+.buttonDefault:hover {-fx-background-color: #CCCCCC}
+.buttonDefault:pressed {-fx-background-color: #AAAAAA}
+
+.buttonGris {-fx-background-color: #CCCCCC}
+.buttonGris:hover {-fx-background-color: #AAAAAA}
+.buttonGris:pressed {-fx-background-color: #999999}
+
+.btnMinimizar {-fx-background-image: url("/resource/minimize.png")}
+.btnMinimizar:hover {-fx-background-image: url("/resource/minimize2.png")}
+.btnCerrar {-fx-background-image: url("/resource/close.png")}
+.btnCerrar:hover {-fx-background-image: url("/resource/close2.png")}
+
+.buttonLibreria {-fx-background-color: transparent}
+.buttonLibreria:hover {-fx-background-color: #3D3D3D}
+.buttonLibreria:pressed {-fx-background-color: #2D2D2D}
+
+.btnNuevo {-fx-background-image: url("/resource/iconAñadirLibro.png")}
+.btnModificar {-fx-background-image: url("/resource/iconModificarLibro.png")}
+.btnBorrar {-fx-background-image: url("/resource/iconBorrarLibro.png")}
+.btnProveedores {-fx-background-image: url("/resource/iconProveedores.png")}
+.btnClientes {-fx-background-image: url("/resource/iconClientes.png")}
+.btnCategorias {-fx-background-image: url("/resource/iconCategorias.png")}
+.btnVentas {-fx-background-image: url("/resource/iconVentas.png")}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="530.0" styleClass="AnchoPane" stylesheets="@../resource/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FrmNuevoLibroController">
+   <children>
+      <Pane layoutX="38.0" layoutY="72.0" prefHeight="275.0" prefWidth="455.0">
+         <children>
+            <TextField fx:id="txfNombre" layoutY="17.0" prefHeight="30.0" prefWidth="205.0" promptText="Nombre" />
+            <TextField fx:id="txfAutor" layoutY="77.0" prefHeight="30.0" prefWidth="205.0" promptText="Autor" />
+            <TextField fx:id="txfPaginas" layoutY="137.0" prefHeight="30.0" prefWidth="205.0" promptText="Páginas" />
+            <TextField fx:id="txfPrecio" layoutY="197.0" prefHeight="30.0" prefWidth="205.0" promptText="Precio" />
+            <ComboBox fx:id="cmbCategoria" layoutX="250.0" layoutY="17.0" prefHeight="30.0" prefWidth="205.0" promptText="Categoría" />
+            <ComboBox fx:id="cmbProveedor" layoutX="250.0" layoutY="77.0" prefHeight="30.0" prefWidth="205.0" promptText="Proveedor" />
+            <DatePicker fx:id="dpFechaP" layoutX="250.0" layoutY="137.0" prefHeight="30.0" prefWidth="205.0" promptText="Fecha de publicación" stylesheets="@../resource/style.css" />
+            <TextField fx:id="txfStock" layoutX="250.0" layoutY="197.0" prefHeight="30.0" prefWidth="205.0" promptText="Stock" />
+            <CheckBox fx:id="cbxDisponible" layoutY="257.0" mnemonicParsing="false" stylesheets="@../resource/style.css" text="Disponible" />
+         </children>
+      </Pane>
+      <Button fx:id="btnCancelar" cancelButton="true" layoutX="373.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnCancelar_OnAction" prefHeight="30.0" prefWidth="120.0" styleClass="buttonBlanco" stylesheets="@../resource/style.css" text="Cancelar" />
+      <Button fx:id="btnAceptar" defaultButton="true" layoutX="233.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnAceptar_OnAction" prefHeight="30.0" prefWidth="120.0" styleClass="buttonDefault" stylesheets="@../resource/style.css" text="Aceptar" />
+   </children>
+</AnchorPane>

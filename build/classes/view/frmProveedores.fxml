@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="AnchoPane" stylesheets="@../resource/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FrmProveedoresController">
+    <children>
+        <TableView fx:id="tbvProveedores" layoutX="50.0" prefHeight="400.0" prefWidth="550.0">
+            <columns>
+                <TableColumn prefWidth="70.0" text="ID">
+                    <cellValueFactory>
+                        <javafx.scene.control.cell.PropertyValueFactory property="nro" /> 
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="241.0" text="Nombre">
+                    <cellValueFactory>
+                        <javafx.scene.control.cell.PropertyValueFactory property="proveedor" /> 
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="238.0" text="Dirección">
+                    <cellValueFactory>
+                        <javafx.scene.control.cell.PropertyValueFactory property="direccion" /> 
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Nuevo" />
+                        <MenuItem mnemonicParsing="false" text="Editar" />
+                        <MenuItem mnemonicParsing="false" text="Borrar" />
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </TableView>
+      <Pane prefHeight="400.0" prefWidth="50.0" />
+    </children>
+</AnchorPane>

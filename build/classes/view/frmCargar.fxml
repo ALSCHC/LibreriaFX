@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="75.0" prefWidth="250.0" styleClass="AnchorPaneUndecorated" stylesheets="@../resource/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FrmCargarController">
+   <children>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="13.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/gif/gifcarga.gif" />
+         </image>
+      </ImageView>
+      <Label layoutX="77.0" layoutY="41.0" text="Cargando..." textFill="#bdbdbd" />
+      <Label layoutX="77.0" layoutY="16.0" text="JavaFX - Librería" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

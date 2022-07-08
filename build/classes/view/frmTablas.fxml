@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="900.0" styleClass="AnchoPane" stylesheets="@../resource/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FrmTablasController">
+   <children>
+      <TabPane layoutY="35.0" prefHeight="420.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Clientes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView prefHeight="392.0" prefWidth="900.0">
+                          <columns>
+                            <TableColumn prefWidth="40.0" text="N°" />
+                            <TableColumn prefWidth="135.0" text="Nombre" />
+                              <TableColumn prefWidth="120.0" text="Fecha de nacimiento" />
+                              <TableColumn prefWidth="117.0" text="Dirección" />
+                              <TableColumn prefWidth="97.0" text="Teléfono" />
+                              <TableColumn prefWidth="125.0" text="Email" />
+                              <TableColumn prefWidth="149.0" text="Libro entregado" />
+                              <TableColumn prefWidth="116.0" text="Fecha entregado" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Proveedores">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView prefHeight="392.0" prefWidth="900.0">
+                           <columns>
+                              <TableColumn prefWidth="40.0" text="N°" />
+                              <TableColumn prefWidth="380.0" text="Nombre" />
+                              <TableColumn prefWidth="476.0" text="Dirección" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Ventas">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView prefHeight="392.0" prefWidth="900.0">
+                           <columns>
+                              <TableColumn prefWidth="40.0" text="N°" />
+                              <TableColumn prefWidth="380.0" text="Fecha de venta" />
+                              <TableColumn prefWidth="479.0" text="Libro" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ToolBar prefHeight="35.0" prefWidth="900.0">
+        <items>
+          <Button mnemonicParsing="false" text="Button" />
+        </items>
+      </ToolBar>
+      <Button layoutX="792.0" layoutY="462.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="buttonBlanco" stylesheets="@../resource/style.css" text="Cancelar" />
+      <Button layoutX="672.0" layoutY="462.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="buttonDefault" stylesheets="@../resource/style.css" text="Guardar" />
+   </children>
+</AnchorPane>

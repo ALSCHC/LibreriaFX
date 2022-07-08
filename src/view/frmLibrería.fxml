@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="AnchoPane" stylesheets="@../resource/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FrmLibreríaController">
+    <children>
+          <MenuBar prefHeight="25.0" prefWidth="1000.0">
+              <menus>
+                  <Menu mnemonicParsing="false" text="Archivo">
+                      <items>
+                          <MenuItem fx:id="mniNuevo" mnemonicParsing="false" onAction="#mniNuevo_OnAction" text="Nuevo" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="mniCerrar" mnemonicParsing="false" onAction="#mniCerrar_OnAction" text="Cerrar" />
+                      </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Editar">
+                      <items>
+                  <MenuItem mnemonicParsing="false" text="Modificar" />
+                  <MenuItem fx:id="mniBorrar" mnemonicParsing="false" onAction="#mniBorrar_OnAction" text="Borrar" />
+                      </items>
+                  </Menu>
+            <Menu mnemonicParsing="false" text="Ver">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Clientes" />
+                  <MenuItem fx:id="mniVerProveedores" mnemonicParsing="false" onAction="#mniVerProveedores_OnAction" text="Proveedores" />
+                  <MenuItem mnemonicParsing="false" text="Categorías" />
+                  <MenuItem mnemonicParsing="false" text="Ventas" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Cuenta">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Cambiar de cuenta..." />
+               </items>
+            </Menu>
+                  <Menu mnemonicParsing="false" text="Ayuda">
+                      <items>
+                  <MenuItem mnemonicParsing="false" text="Documentación" />
+                          <MenuItem mnemonicParsing="false" text="Acerca de..." />
+                      </items>
+                  </Menu>
+              </menus>
+          </MenuBar>
+        <BorderPane layoutY="25.0" prefHeight="575.0" prefWidth="1000.0">
+            <center>
+                <TableView fx:id="tbvLibros" prefHeight="507.0" prefWidth="964.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn prefWidth="62.0" text="Libro N°">
+                            <cellValueFactory>
+                                <javafx.scene.control.cell.PropertyValueFactory property="nro" /> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="182.0" text="Nombre">
+                            <cellValueFactory>
+                                <javafx.scene.control.cell.PropertyValueFactory property="nombre" /> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="109.0" text="Autor">
+                            <cellValueFactory>
+                                <javafx.scene.control.cell.PropertyValueFactory property="autor" /> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="107.0" text="Categoría">
+                            <cellValueFactory>
+                                <javafx.scene.control.cell.PropertyValueFactory property="categ" /> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="112.0" text="Editorial">
+                            <cellValueFactory>
+                                <javafx.scene.control.cell.PropertyValueFactory property="editorial" /> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="64.0" text="Páginas">
+                            <cellValueFactory>
+                                <javafx.scene.control.cell.PropertyValueFactory property="paginas" /> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="135.0" text="Fecha de Publicación">
+                            <cellValueFactory>
+                                <javafx.scene.control.cell.PropertyValueFactory property="fecPublicacion" /> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="90.0" text="Precio">
+                            <cellValueFactory>
+                                <javafx.scene.control.cell.PropertyValueFactory property="precio" /> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="68.0" text="Stock">
+                            <cellValueFactory>
+                                <javafx.scene.control.cell.PropertyValueFactory property="stock" /> 
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="70.0" text="Disponible">
+                            <cellValueFactory>
+                                <javafx.scene.control.cell.PropertyValueFactory property="disponib" /> 
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                    <contextMenu>
+                        <ContextMenu>
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#ctxNuevo_OnAction" text="Nuevo" />
+                                <MenuItem mnemonicParsing="false" onAction="#ctxModificar_OnAction" text="Modificar" />
+                                <MenuItem mnemonicParsing="false" onAction="#ctxBorrar_OnAction" text="Borrar" />
+                            </items>
+                        </ContextMenu>
+                    </contextMenu>
+                </TableView>
+            </center>
+         <top>
+            <Pane prefHeight="32.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#btnNuevo_OnAction" prefHeight="31.0" prefWidth="40.0" stylesheets="@../resource/style.css">
+                     <styleClass>
+                        <String fx:value="buttonLibreria" />
+                        <String fx:value="btnNuevo" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="Nuevo" />
+                     </tooltip></Button>
+                  <Button fx:id="btnModificar" layoutX="40.0" mnemonicParsing="false" onAction="#btnModificar_OnAction" prefHeight="31.0" prefWidth="40.0" stylesheets="@../resource/style.css">
+                     <styleClass>
+                        <String fx:value="buttonLibreria" />
+                        <String fx:value="btnModificar" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="Modificar" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnBorrar" layoutX="80.0" mnemonicParsing="false" onAction="#btnBorrar_OnAction" prefHeight="31.0" prefWidth="40.0" stylesheets="@../resource/style.css">
+                     <styleClass>
+                        <String fx:value="buttonLibreria" />
+                        <String fx:value="btnBorrar" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="Borrar" />
+                     </tooltip></Button>
+                  <Separator layoutX="123.0" layoutY="2.0" opacity="0.3" orientation="VERTICAL" prefHeight="28.0" prefWidth="0.0" />
+                  <Button fx:id="btnClientes" layoutX="129.0" mnemonicParsing="false" onAction="#btnClientes_OnAction" prefHeight="31.0" prefWidth="40.0" stylesheets="@../resource/style.css">
+                     <styleClass>
+                        <String fx:value="buttonLibreria" />
+                        <String fx:value="btnClientes" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="Clientes" />
+                     </tooltip></Button>
+                  <Button fx:id="btnProveedores" layoutX="169.0" mnemonicParsing="false" onAction="#btnProveedores_OnAction" prefHeight="31.0" prefWidth="40.0" stylesheets="@../resource/style.css">
+                     <styleClass>
+                        <String fx:value="buttonLibreria" />
+                        <String fx:value="btnProveedores" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="Proveedores" />
+                     </tooltip></Button>
+                  <Button fx:id="btnCategorias" layoutX="209.0" mnemonicParsing="false" onAction="#btnCategorias_OnAction" prefHeight="31.0" prefWidth="40.0" stylesheets="@../resource/style.css">
+                     <styleClass>
+                        <String fx:value="buttonLibreria" />
+                        <String fx:value="btnCategorias" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="Categorías" />
+                     </tooltip></Button>
+                  <Button fx:id="btnVentas" layoutX="249.0" mnemonicParsing="false" onAction="#btnVentas_OnAction" prefHeight="31.0" prefWidth="40.0" stylesheets="@../resource/style.css">
+                     <styleClass>
+                        <String fx:value="buttonLibreria" />
+                        <String fx:value="btnVentas" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="Ventas" />
+                     </tooltip>
+                  </Button>
+                  <TextField fx:id="txfBuscar" layoutX="797.0" layoutY="3.0" onKeyReleased="#txfBuscar_OnKeyReleased" prefHeight="26.0" prefWidth="200.0" promptText="Buscar..." styleClass="TextFieldRegistro" stylesheets="@../resource/style.css" />
+                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="972.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/img/iconBuscar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+         <bottom>
+            <Pane prefHeight="32.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="968.0" layoutY="8.0" text="V1.0" />
+                  <Label fx:id="lblInfo" layoutX="14.0" layoutY="8.0" textFill="#eeeeee" />
+               </children>
+            </Pane>
+         </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>
